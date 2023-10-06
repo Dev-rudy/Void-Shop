@@ -58,6 +58,7 @@ class mainContent extends  HTMLElement{
      <p class="description" id='description'>Found anything interesting yet?</p>
      <button id="b-one">Explore</button>
      <p id="button-prompt">click the Explore Button to see Offers</p>
+	 
   </div>
   
   <div class="content-two">
@@ -65,7 +66,16 @@ class mainContent extends  HTMLElement{
      <diV class="cta-aside" id="cta-aside"><h1 class="aside-head"id="aside-head">this Month's top3</h1></div>
   </aside>
   </div>
-        </div>`
+        </div>
+		
+		
+<div class="footer">
+<p id="footer-desc">site author:allen jester aka Rudy |
+   site name :Void  Marketplace |
+    all rights reserved 2023</p>
+</div>		
+		
+		`
 	}};
 customElements.define("main-contents",mainContent);
 
