@@ -52,32 +52,32 @@ const exitSidenav=document.getElementById("exit-nav");
 class mainContent extends  HTMLElement{
 	connectedCallback(){
 		this.innerHTML=`
-		<div class="content-holder">
+		<div class="content-holder" id="content-holder">
   <div class="content-one">
      <h1 class="headline" id="headline" >Let us <br> strike Your Fancy!</h1>
      <p class="description" id='description'>Found anything interesting yet?</p>
-     <button id="b-one">Explore</button>
+     <button id="b-one" onclick="exploreButton()">Explore</button>
      <p id="button-prompt">click the Explore Button to see Offers</p>
 	 
   </div>
   
-  <div class="content-two">
+  <div class="content-two" id="content-two">
   <aside>
-     <diV class="cta-aside" id="cta-aside"><h1 class="aside-head"id="aside-head" >this Month's top3</h1>
+     <diV class="cta-aside" id="cta-aside"><h1 class="aside-head"id="aside-head" >Topics</h1>
 	 <ul class="top-collection" id="top-collection"> 
 	 
-	 <li id="top-ul-items"><img class="top-ul-img" id="top-ul-img" src="#" alt="" title="" />
-	                          <h1 class="cta-tittle" id="cta-tittle">Tthis is  the Title</h1>
+	 <li id="top-ul-items"><img class="top-ul-img" id="top-ul-img" src="https://png.pngtree.com/thumb_back/fh260/background/20230705/pngtree-new-shopping-web-terms-in-blue-and-violet-a-3d-rendering-image_3801919.jpg" alt="an image with blue background and a shopping cart" title="" />
+	                          <h1 class="cta-tittle" id="cta-tittle">Buy From Us</h1>
                         	 <p class="top-ul-desc" id="one">Lorem ipsum dolor sit amet. Cum illum nesciunt et eveniet dolores vel unde galisum aut possimus neque At ratione debitis sed </p>
      </li>
 	 
-	  <li id="top-ul-items"><img class="top-ul-img" id="top-ul-img" src="#" alt="" title="" />
-	                         <h1 class="cta-tittle" id="cta-tittle">Tthis is  the Title</h1>
+	  <li id="top-ul-items"><img class="top-ul-img" id="top-ul-img" src="https://e1.pxfuel.com/desktop-wallpaper/469/181/desktop-wallpaper-best-5-reading-books-on-hip-the-reader.jpg" alt="an image  of a nature background and a book to read" title="" />
+	                         <h1 class="cta-tittle" id="cta-tittle">Read Articles</h1>
                         	 <p class="top-ul-desc" id="two">Lorem ipsum dolor sit amet. Cum illum nesciunt et eveniet dolores vel unde galisum aut possimus neque At ratione debitis sed </p>
      </li>
 	 
-	  <li id="top-ul-items"><img class="top-ul-img" id="top-ul-img" src="#" alt="" title="" />
-	                          <h1 class="cta-tittle" id="cta-tittle">Tthis is  the Title</h1>
+	  <li id="top-ul-items"><img class="top-ul-img" id="top-ul-img" src="https://img.freepik.com/vector-premium/banner-etiqueta-sello-recomendado-pulgar-arriba-o-icono-similar-boton-etiqueta-recomendada_248162-1380.jpg" alt="thumbs up imogi that says  recomended " title="" />
+	                          <h1 class="cta-tittle" id="cta-tittle">See Recomendations</h1>
                         	 <p class="top-ul-desc" id="three">Lorem ipstit amet. Cum illum nesciunt et eveniet dolores vel unde galisum aut possimus neque At ratione debitis sed </p>
      </li>
 	
@@ -87,6 +87,8 @@ class mainContent extends  HTMLElement{
   </aside>
   </div>
         </div>
+		
+		
 		
 
 		`
@@ -116,6 +118,7 @@ window.onload=function(){                             /*-------i dont know why b
 	let bOne=document.getElementById("b-one");
 	    bOne.style.opacity="1.0";
 		console.log("onlad elemets works ");
+  let contHolderTwo=document.getElementById("content-holder-two").style.display="none";
 };
 
 /*--------------------------------------b-one hover   navigation site explore button----------*/
@@ -131,7 +134,7 @@ let onHover=document.getElementById("b-one");
 	    siteBackground.style.backgroundRepeat="no-repeat";
 		 siteBackground.style.backgroundPosition="center";
 	let siteName=document.getElementById("site-name").style.color="lightblue";
-	    
+	let navi=document.getElementById("navigation").style.background="linear-gradient(to right,fuchsia,lightblue)" ;  
 
 	document.getElementById("headline").style.color="lightblue";
 	
@@ -154,10 +157,10 @@ let onHover=document.getElementById("b-one");
 	   siteBackground.style.backgroundSize="cover";
 	    siteBackground.style.backgroundRepeat="no-repeat";
 		 siteBackground.style.backgroundPosition="center";
-		 siteBackground.style.transitionDuration="5s";
-		 
+		 siteBackground.style.transitionDuration="5s"; 
 	document.getElementById("headline").style.color="black";
 		 let siteName=document.getElementById("site-name").style.color="black";
+		 let navi=document.getElementById("navigation").style.background="rgba(0, 0, 0, 0.5)" ;
 		 
 		 if(window.matchMedia("(orientation: portrait)").matches){                 /*-------if landscape---------------------------------*/
 	let	siteBackground=document.getElementById("body");
@@ -195,27 +198,38 @@ let asideHover=document.getElementById("cta-aside");
     asideHover.addEventListener("mouseover",asideFunc);
 	function asideFunc(){
 	let head=document.getElementById("aside-head");
-		head.style.color="gold";
-		head.style.fontSize="x-large";
-		head.style.textShadow="-2px -2px 1px red";
+		head.style.color="black";
+		head.style.fontSize="large";
+		head.style.textShadow="-2px -2px 1px lightblue";
+		head.style.background="linear-gradient(to right,lightblue,fuchsia)";
 		
 	const theTitle=document.getElementsByClassName("cta-tittle");
 	for(i=0;i<theTitle.length;i++){
-	theTitle[i].style.background="yellow";
+	theTitle[i].style.background="linear-gradient(to right,lightblue,fuchsia)";
 	}
+	const desc=document.getElementsByClassName("top-ul-desc");
+	for(i=0;i<desc.length;i++){
+	desc[i].style.color="white";
+	                              }
+
 		
 	};
    asideHover.addEventListener("mouseout",asideFunc2);
    function asideFunc2(){
 	  let heads=document.getElementById("aside-head"); 
 	      heads.style.color="black";
-		  heads.style.fontSize="x-large";
+		  heads.style.fontSize="large";
 		  heads.style.textAlign="center";
 		  heads.style.textShadow="-2px -2px 1px transparent";
+		  heads.style.background="lightblue";
 		const theTitle=document.getElementsByClassName("cta-tittle");
 	for(i=0;i<theTitle.length;i++){
 	theTitle[i].style.background="transparent";
-   };
+   }
+   	 const desc=document.getElementsByClassName("top-ul-desc");
+	for(i=0;i<desc.length;i++){
+	desc[i].style.color="black";
+	                              }
    };
 
 /*------------------hover on top navigation bar ---------------------------------*/
@@ -240,5 +254,168 @@ function navssMenu(){
 }	 
 	 };
 
+/*----------------------------------------------------------------------------------------------------------------from top to here is the main page
+------------------------------------------------------------------------------------------------------------------or landing page-  i have decided to make this website function as an spa  
+ ------------------------------------------------------------------less file  resources  but the website itself can stand alone ------------------------------------------*/
 
-	 
+
+
+/*----------------------------------------------------------explore button and  backto home button  onclick function----------------------------*/
+console.log("new subpage here");
+function exploreButton(){
+let explrBtn=document.getElementById("content-holder");
+explrBtn.style.transitionDuration="1s";
+    explrBtn.style.display="none";
+let subPageHidden=document.getElementById("content-holder-two");
+    subPageHidden.style.display="grid";
+
+	  
+		 console.log('explore button clicked');
+	};
+function backHome(){
+	let explrBtn=document.getElementById("content-holder");
+explrBtn.style.transitionDuration="1s";
+    explrBtn.style.display="grid";
+	explrBtn.style.height="130vh";
+
+
+	
+let subPageHidden=document.getElementById("content-holder-two");
+    subPageHidden.style.display="none";}
+	
+	
+/*----------------------------------------------------------explore button and  backto home button  onclick function    END----------------------------*/
+
+/*--------------------------------------------------------onclick articles on subpage 2 and  3 to be rendered  in content-four-subpage -------------------------
+                                                           how are you able to do that??----------------------------------------------------------------------------*/
+const article1=document.getElementById("item1");
+article1.addEventListener("click",itemOne);
+function itemOne(){
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	 let articleOne=document.querySelector(".article-one").style.display="block";
+	 let articleTwo=document.querySelector(".article-two").style.display="none";
+	 let articleThree=document.querySelector(".article-three").style.display="none";
+	 let articleFour=document.querySelector(".article-four").style.display="none";
+	 let articleFive=document.querySelector(".article-five").style.display="none";
+	  let articleTop=document.querySelector(".article-top").style.display="none";
+	};
+const article2=document.getElementById("item2");
+article2.addEventListener("click",itemTwo);
+function itemTwo(){
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	 let articleOne=document.querySelector(".article-one").style.display="none";
+	 let articleTwo=document.querySelector(".article-two").style.display="block";
+	 let articleThree=document.querySelector(".article-three").style.display="none";
+	 let articleFour=document.querySelector(".article-four").style.display="none";
+	 let articleFive=document.querySelector(".article-five").style.display="none";
+	  let articleTop=document.querySelector(".article-top").style.display="none";
+	};
+	    	    
+const article3=document.getElementById("item3");
+article3.addEventListener("click",itemThree);
+function itemThree(){
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	 let articleOne=document.querySelector(".article-one").style.display="none";
+	 let articleTwo=document.querySelector(".article-two").style.display="none";
+	 let articleThree=document.querySelector(".article-three").style.display="block";
+	 let articleFour=document.querySelector(".article-four").style.display="none";
+	 let articleFive=document.querySelector(".article-five").style.display="none";
+	  let articleTop=document.querySelector(".article-top").style.display="none";
+	};
+
+const article4=document.getElementById("item4");
+article4.addEventListener("click",itemFour);
+function itemFour(){
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	 let articleOne=document.querySelector(".article-one").style.display="none";
+	 let articleTwo=document.querySelector(".article-two").style.display="none";
+	 let articleThree=document.querySelector(".article-three").style.display="none";
+	 let articleFour=document.querySelector(".article-four").style.display="block";
+	 let articleFive=document.querySelector(".article-five").style.display="none";
+	  let articleTop=document.querySelector(".article-top").style.display="none";
+	};
+	    	
+const article5=document.getElementById("item5");
+article5.addEventListener("click",itemFive);
+function itemFive(){
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	 let articleOne=document.querySelector(".article-one").style.display="none";
+	 let articleTwo=document.querySelector(".article-two").style.display="none";
+	 let articleThree=document.querySelector(".article-three").style.display="none";
+	 let articleFour=document.querySelector(".article-four").style.display="none";
+	 let articleFive=document.querySelector(".article-five").style.display="block";
+	  let articleTop=document.querySelector(".article-top").style.display="none";
+	};
+	    const articleTop=document.getElementById("top-article-red");
+articleTop.addEventListener("click",artTop);
+function artTop(){
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	 let articleOne=document.querySelector(".article-one").style.display="none";
+	 let articleTwo=document.querySelector(".article-two").style.display="none";
+	 let articleThree=document.querySelector(".article-three").style.display="none";
+	 let articleFour=document.querySelector(".article-four").style.display="none";
+	 let articleFive=document.querySelector(".article-five").style.display="none";
+	 let articleTop=document.querySelector(".article-top").style.display="block";
+	};
+
+ const itemGenreIn=document.getElementById("item-genre");
+       itemGenreIn.addEventListener("mouseover",dropDown);
+	function dropDown(){
+		         document.getElementById("item-genre").style.height="15.9vh";
+				 document.getElementById("i1").style.background="gold";
+				  document.getElementById("i1").style.fontWeight="bold";
+				 document.getElementById("i2").style.display="block";
+				 document.getElementById("i3").style.display="block";
+				 document.getElementById("i4").style.display="block";
+				 document.getElementById("i5").style.display="block";
+	};
+	
+ const itemGenreout=document.getElementById("item-genre");
+       itemGenreout.addEventListener("mouseout",dropDownout);
+	function dropDownout(){
+		         document.getElementById("item-genre").style.height="3.5vh";
+				 document.getElementById("i1").style.background="linear-gradient(to right,white,lightblue,fuchsia)";
+				 document.getElementById("i2").style.display="none";
+				 document.getElementById("i3").style.display="none";
+				 document.getElementById("i4").style.display="none"
+				 document.getElementById("i5").style.display="none";
+	};
+/*------------------------------------------------------------------------------------*/
+function  topSeller(){
+    let holderOne=document.getElementById("holder1").style.display="grid"
+	    holderTwo=document.getElementById("holder2").style.display="none"
+		 holderThree=document.getElementById("holder3").style.display="none"
+		  holderfour=document.getElementById("holder4").style.display="none"
+                       };
+function  Bags(){
+    let holderOne=document.getElementById("holder1").style.display="none"
+	    holderTwo=document.getElementById("holder2").style.display="grid"
+		 holderThree=document.getElementById("holder3").style.display="none"
+		  holderfour=document.getElementById("holder4").style.display="none"
+                       };
+
+function  phones(){
+    let holderOne=document.getElementById("holder1").style.display="none"
+	    holderTwo=document.getElementById("holder2").style.display="none"
+		 holderThree=document.getElementById("holder3").style.display="grid"
+		  holderfour=document.getElementById("holder4").style.display="none"
+                       };
+function  accessories(){
+    let holderOne=document.getElementById("holder1").style.display="none"
+	    holderTwo=document.getElementById("holder2").style.display="none"
+		 holderThree=document.getElementById("holder3").style.display="none"
+		  holderfour=document.getElementById("holder4").style.display="grid"
+                       };
+
+function copyText(){
+
+	window.confirm(" pls copy this referal code and paste it in your lazada referal input field, Thank you ➡️ AAttskPd  ");
+	console.log("lazada affiliate Banner clicked ");
+	
+};
