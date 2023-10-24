@@ -134,7 +134,7 @@ let onHover=document.getElementById("b-one");
 	    siteBackground.style.backgroundRepeat="no-repeat";
 		 siteBackground.style.backgroundPosition="center";
 	let siteName=document.getElementById("site-name").style.color="lightblue";
-	let navi=document.getElementById("navigation").style.background="linear-gradient(to right,fuchsia,lightblue)" ;  
+	let navi=document.getElementById("navigation").style.background="linear-gradient(to bottom,lightblue,purple,fuchsia)" ;  
 
 	document.getElementById("headline").style.color="lightblue";
 	
@@ -201,11 +201,12 @@ let asideHover=document.getElementById("cta-aside");
 		head.style.color="black";
 		head.style.fontSize="large";
 		head.style.textShadow="-2px -2px 1px lightblue";
-		head.style.background="linear-gradient(to right,lightblue,fuchsia)";
+		head.style.background="linear-gradient(to bottom,lightblue,purple,fuchsia)";
 		
 	const theTitle=document.getElementsByClassName("cta-tittle");
 	for(i=0;i<theTitle.length;i++){
-	theTitle[i].style.background="linear-gradient(to right,lightblue,fuchsia)";
+	theTitle[i].style.background="linear-gradient(to bottom,lightblue,purple,fuchsia)";
+	theTitle[i].style.color="white";
 	}
 	const desc=document.getElementsByClassName("top-ul-desc");
 	for(i=0;i<desc.length;i++){
@@ -224,7 +225,8 @@ let asideHover=document.getElementById("cta-aside");
 		  heads.style.background="lightblue";
 		const theTitle=document.getElementsByClassName("cta-tittle");
 	for(i=0;i<theTitle.length;i++){
-	theTitle[i].style.background="transparent";
+	theTitle[i].style.background="lightblue";
+	theTitle[i].style.color="black";
    }
    	 const desc=document.getElementsByClassName("top-ul-desc");
 	for(i=0;i<desc.length;i++){
@@ -289,54 +291,70 @@ let subPageHidden=document.getElementById("content-holder-two");
 /*--------------------------------------------------------onclick articles on subpage 2 and  3 to be rendered  in content-four-subpage -------------------------
                                                            how are you able to do that??----------------------------------------------------------------------------*/
 const article1=document.getElementById("item1");
-article1.addEventListener("click",itemOne);
+       article1.addEventListener("click",itemOne);
 function itemOne(){
-	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
-	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="300vh";    /*-----------------------------change the content holder vh depending on the content length-----------------*/
+	let renderPage=document.getElementById("content-four-subpage").style.height="210vh";            /*------------------------this one  as  well-------------------------------------*/
 	 let articleOne=document.querySelector(".article-one").style.display="block";
 	 let articleTwo=document.querySelector(".article-two").style.display="none";
 	 let articleThree=document.querySelector(".article-three").style.display="none";
 	 let articleFour=document.querySelector(".article-four").style.display="none";
 	 let articleFive=document.querySelector(".article-five").style.display="none";
 	  let articleTop=document.querySelector(".article-top").style.display="none";
+	   let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	  let lazaff3=document.querySelector(".lazaff3").style.display="block";
+	  let lazaff4=document.querySelector(".lazaff4").style.display="block";
 	};
 const article2=document.getElementById("item2");
 article2.addEventListener("click",itemTwo);
 function itemTwo(){
-	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
-	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="300vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="210vh";
 	 let articleOne=document.querySelector(".article-one").style.display="none";
 	 let articleTwo=document.querySelector(".article-two").style.display="block";
 	 let articleThree=document.querySelector(".article-three").style.display="none";
 	 let articleFour=document.querySelector(".article-four").style.display="none";
 	 let articleFive=document.querySelector(".article-five").style.display="none";
 	  let articleTop=document.querySelector(".article-top").style.display="none";
+	   let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	  let lazaff3=document.querySelector(".lazaff3").style.display="block";
+	  let lazaff4=document.querySelector(".lazaff4").style.display="block";
 	};
 	    	    
 const article3=document.getElementById("item3");
 article3.addEventListener("click",itemThree);
 function itemThree(){
-	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
-	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="300vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="210vh";
 	 let articleOne=document.querySelector(".article-one").style.display="none";
 	 let articleTwo=document.querySelector(".article-two").style.display="none";
 	 let articleThree=document.querySelector(".article-three").style.display="block";
 	 let articleFour=document.querySelector(".article-four").style.display="none";
 	 let articleFive=document.querySelector(".article-five").style.display="none";
 	  let articleTop=document.querySelector(".article-top").style.display="none";
+	   let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	  let lazaff3=document.querySelector(".lazaff3").style.display="block";
+	  let lazaff4=document.querySelector(".lazaff4").style.display="block";
 	};
 
 const article4=document.getElementById("item4");
 article4.addEventListener("click",itemFour);
 function itemFour(){
-	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
-	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="300vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="210vh";
 	 let articleOne=document.querySelector(".article-one").style.display="none";
 	 let articleTwo=document.querySelector(".article-two").style.display="none";
 	 let articleThree=document.querySelector(".article-three").style.display="none";
 	 let articleFour=document.querySelector(".article-four").style.display="block";
 	 let articleFive=document.querySelector(".article-five").style.display="none";
 	  let articleTop=document.querySelector(".article-top").style.display="none";
+	   let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	  let lazaff3=document.querySelector(".lazaff3").style.display="block";
+	  let lazaff4=document.querySelector(".lazaff4").style.display="block";
 	};
 	    	
 const article5=document.getElementById("item5");
@@ -350,24 +368,42 @@ function itemFive(){
 	 let articleFour=document.querySelector(".article-four").style.display="none";
 	 let articleFive=document.querySelector(".article-five").style.display="block";
 	  let articleTop=document.querySelector(".article-top").style.display="none";
+	  let lazaff1=document.querySelector(".lazaff").style.display="none";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="none";
+	  let lazaff3=document.querySelector(".lazaff3").style.display="none";
+	  let lazaff4=document.querySelector(".lazaff4").style.display="none";
+	  if(window.matchMedia("(orientation: portrait)").matches){
+		  let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	 }
+	 if(window.matchMedia("(orientation: landscape)").matches){
+		  let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	 }
 	};
 	    const articleTop=document.getElementById("top-article-red");
 articleTop.addEventListener("click",artTop);
 function artTop(){
-	let contentHolderTwo=document.getElementById("content-holder-two").style.height="200vh";
-	let renderPage=document.getElementById("content-four-subpage").style.height="110vh";
+	let contentHolderTwo=document.getElementById("content-holder-two").style.height="300vh";
+	let renderPage=document.getElementById("content-four-subpage").style.height="210vh";
 	 let articleOne=document.querySelector(".article-one").style.display="none";
 	 let articleTwo=document.querySelector(".article-two").style.display="none";
 	 let articleThree=document.querySelector(".article-three").style.display="none";
 	 let articleFour=document.querySelector(".article-four").style.display="none";
 	 let articleFive=document.querySelector(".article-five").style.display="none";
 	 let articleTop=document.querySelector(".article-top").style.display="block";
+	  let lazaff1=document.querySelector(".lazaff").style.display="block";
+	  let lazaff2=document.querySelector(".lazaff2").style.display="block";
+	  let lazaff3=document.querySelector(".lazaff3").style.display="block";
+	  let lazaff4=document.querySelector(".lazaff4").style.display="block";
 	};
+/*------------------------------------------------------------------------------------*/
 
  const itemGenreIn=document.getElementById("item-genre");
        itemGenreIn.addEventListener("mouseover",dropDown);
 	function dropDown(){
 		         document.getElementById("item-genre").style.height="15.9vh";
+				  document.getElementById("item-genre").style.opacity="1";
 				 document.getElementById("i1").style.background="gold";
 				  document.getElementById("i1").style.fontWeight="bold";
 				 document.getElementById("i2").style.display="block";
@@ -379,13 +415,40 @@ function artTop(){
  const itemGenreout=document.getElementById("item-genre");
        itemGenreout.addEventListener("mouseout",dropDownout);
 	function dropDownout(){
-		         document.getElementById("item-genre").style.height="3.5vh";
-				 document.getElementById("i1").style.background="linear-gradient(to right,white,lightblue,fuchsia)";
+		         document.getElementById("item-genre").style.height="3.4vh";
+				 document.getElementById("i1").style.background="linear-gradient(to bottom,white,lightblue,fuchsia)";
 				 document.getElementById("i2").style.display="none";
 				 document.getElementById("i3").style.display="none";
 				 document.getElementById("i4").style.display="none"
 				 document.getElementById("i5").style.display="none";
 	};
+       /*------------------------------------------------------------------------------------*/
+ const itemI1=document.getElementById("i1");
+       itemI1.addEventListener("click",i1);
+	function i1(){let itm=document.getElementById("item-genre").style.height="15.9vh";
+	};	
+
+ const itemI2=document.getElementById("i2");
+       itemI2.addEventListener("click",i2);
+	function i2(){ document.getElementById("item-genre").style.height="3.4vh";
+	                  document.getElementById("item-genre").style.opacity="0.3";
+	};
+ const itemI3=document.getElementById("i3");
+       itemI3.addEventListener("click",i3);
+	function i3(){document.getElementById("item-genre").style.height="3.4vh";
+	 document.getElementById("item-genre").style.opacity="0.3";
+	};
+ const itemI4=document.getElementById("i4");
+       itemI4.addEventListener("click",i4);
+	function i4(){document.getElementById("item-genre").style.height="3.4vh";
+	 document.getElementById("item-genre").style.opacity="0.3";
+	};
+ const itemI5=document.getElementById("i5");
+       itemI5.addEventListener("click",i5);
+	function i5(){document.getElementById("item-genre").style.height="3.4vh";
+	 document.getElementById("item-genre").style.opacity="0.3";
+	};
+
 /*------------------------------------------------------------------------------------*/
 function  topSeller(){
     let holderOne=document.getElementById("holder1").style.display="grid"
@@ -419,3 +482,10 @@ function copyText(){
 	console.log("lazada affiliate Banner clicked ");
 	
 };
+function copyTextTwo(){
+
+	window.confirm(" pls copy this referal code and paste it in your lazada referal input field, Thank you ➡️ QcGv4Pl  ");
+	console.log("Ecomobi affiliate Banner clicked ");
+	
+};
+
